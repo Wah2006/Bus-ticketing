@@ -1,3 +1,4 @@
+import { useState } from 'react';
 import { useI18n } from '../../hooks/useI18n';
 import Input from '../../components/ui/Input';
 import Button from '../../components/ui/Button';
@@ -5,7 +6,7 @@ import SeatMapPage from './SeatMapPage';
 
 export default function CheckoutPage({ booking, onConfirm }) {
     const { t } = useI18n();
-    const [passangerData, setPassengerData] = React.useState({
+    const [passengerData, setPassengerData] = useState({
         firstName: '',
         lastName: '',
         phone: '',
@@ -14,7 +15,7 @@ export default function CheckoutPage({ booking, onConfirm }) {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        if (onConfirm) onConfirm(passangerData);
+        if (onConfirm) onConfirm(passengerData);
     };
 
     return (
@@ -38,17 +39,17 @@ export default function CheckoutPage({ booking, onConfirm }) {
                                     <Input
                                         label={t('auth.firstName')}
                                         required
-                                        value={passangerData.firstName}
+                                        value={passengerData.firstName}
                                         onChange={(e) =>
-                                            setPassengerData({ ...passangerData, firstName: e.target.value })
+                                            setPassengerData({ ...passengerData, firstName: e.target.value })
                                         }
                                     />
                                     <Input
                                         label={t('auth.lastName')}
                                         required
-                                        value={passangerData.lastName}
+                                        value={passengerData.lastName}
                                         onChange={(e) =>
-                                            setPassengerData({ ...passangerData, lastName: e.target.value })
+                                            setPassengerData({ ...passengerData, lastName: e.target.value })
                                         }
                                     />
                                 </div>
@@ -56,18 +57,18 @@ export default function CheckoutPage({ booking, onConfirm }) {
                                     type="email"
                                     label={t('auth.email')}
                                     required
-                                    value={passangerData.email}
+                                    value={passengerData.email}
                                     onChange={(e) =>
-                                        setPassengerData({ ...passangerData, email: e.target.value })
+                                        setPassengerData({ ...passengerData, email: e.target.value })
                                     }
                                 />
                                 <Input
                                     type="tel"
                                     label={t('auth.phone')}
                                     required
-                                    value={passangerData.phone}
+                                    value={passengerData.phone}
                                     onChange={(e) =>
-                                        setPassengerData({ ...passangerData, phone: e.target.value })
+                                        setPassengerData({ ...passengerData, phone: e.target.value })
                                     }
                                 />
                                 <div className="flex gap-4 pt-4">

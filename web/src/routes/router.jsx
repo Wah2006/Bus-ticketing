@@ -7,7 +7,6 @@ import HomePage from '../pages/HomePage';
 import LoginPage from '../features/auth/LoginPage';
 import RegisterPage from '../features/auth/RegisterPage';
 import SearchPage from '../features/search/SearchPage';
-import SeatMapPage from '../features/booking/SeatMapPage';
 import CheckoutPage from '../features/booking/CheckoutPage';
 import BookingConfirmationPage from '../features/booking/BookingConfirmationPage';
 import MyBookingsPage from '../features/account/MyBookingsPage';
@@ -58,6 +57,15 @@ export default function AppRouter() {
                             element={
                                 <ProtectedRoute requiredRole="agency_staff">
                                     <AdminDashboard />
-                                </Router>
-  );
+                                </ProtectedRoute>
+                            }
+                        />
+
+                        <Route path="*" element={<Navigate to="/" />} />
+                    </Routes>
+                </main>
+                <Footer />
+            </div>
+        </Router>
+    );
 }
