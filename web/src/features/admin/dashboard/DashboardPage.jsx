@@ -1,10 +1,10 @@
 import { useQuery } from '@tanstack/react-query';
-import { useI18n } from '../../hooks/useI18n';
-import { apiClient } from '../../lib/apiClient';
-import { useAuth } from '../auth/useAuth';
-import Table from '../../components/ui/Table';
-import Button from '../../components/ui/Button';
-import { SkeletonLoader } from '../../components/ui/StateComponents';
+import { useI18n } from '../../../hooks/useI18n';
+import { apiClient } from '../../../lib/apiClient';
+import { useAuth } from '../../../features/auth/useAuth';   // ← Fixed path
+import Table from '../../../components/ui/Table';
+import Button from '../../../components/ui/Button';
+import { SkeletonLoader } from '../../../components/ui/StateComponents';
 
 export default function AdminDashboard() {
     const { t } = useI18n();

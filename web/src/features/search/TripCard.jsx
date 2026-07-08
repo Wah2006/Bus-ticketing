@@ -1,5 +1,5 @@
 import { useI18n } from '../../hooks/useI18n';
-import Button from '../ui/Button';
+import Button from '../../components/ui/Button';
 
 export default function TripCard({ trip, onSelect }) {
     const { t } = useI18n();
