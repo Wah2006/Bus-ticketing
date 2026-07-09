@@ -44,17 +44,22 @@ cp .env.example .env.local
 # Then run:
 npm run migrate
 npm run seed
+```
 
 # Start development server
+```
 npm run dev
+```
 Backend runs on: http://localhost:3000
 2. Frontend Setup
-Bashcd ../web
+```Bash
+cd ../web
+```
 
 npm install
 npm run dev
 Frontend runs on: http://localhost:5173
-📁 Project Structure
+````📁 Project Structure
 textVibeCoding/
 ├── backend/                  # Node.js/Express API
 │   ├── src/
@@ -77,22 +82,25 @@ textVibeCoding/
 │
 ├── README.md
 └── docker-compose.yml (optional)
-Available Scripts
+````
+## Available Scripts
 Backend
+````bash
 
 npm run dev - Start dev server
 npm run migrate - Run Prisma migrations
 npm run seed - Seed sample data
 npm run lint - Run ESLint
 npm test - Run tests
-
+````
 Frontend
+````bash
 
 npm run dev - Start Vite dev server
 npm run build - Production build
 npm run preview - Preview build
-
-Test Flow
+````
+## Test Flow
 
 Register / Login
 Go to Search Trips
@@ -101,36 +109,36 @@ Choose trip → Select seats
 Fill passenger details → Checkout
 View booking confirmation
 
-Tech Stack
+## Tech Stack
 
 Backend: Node.js, Express, Prisma, PostgreSQL, Redis, JWT, Zod
 Frontend: React 18, Vite, Tailwind CSS, React Query, React Router
 Tools: TypeScript (partial), i18n, ESLint, Prettier
 
-Common Issues & Fixes
+## Common Issues & Fixes
 Database Not Responding:
 
 Start PostgreSQL + Redis services
 Check DATABASE_URL and REDIS_URL in .env.local
 Run npm run migrate and npm run seed
 
-Frontend Import Errors:
+## Frontend Import Errors:
 
 Fix relative paths (e.g. ../../../features/auth/useAuth)
 Run npm install after changes
 
-Deployment
+## Deployment
 
 Backend: Render, Railway, or VPS
 Frontend: Vercel / Netlify
 Database: Supabase, Neon, or managed PostgreSQL
 
 
-Made with ❤️ for Cameroon transport digitization
-text---
+Made with L❤️ve for Cameroon transport digitization
+````text---
 
 **Next Step**: Paste this into your local `README.md` file and commit it.
-
+````
 Would you like me to also generate:
 - A `docker-compose.yml`?
 - Environment variable template?
